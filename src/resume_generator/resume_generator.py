@@ -52,25 +52,12 @@ def create_resume(filename, resume):
             right_align_normal_style,
         )
     )
-    story.append(Spacer(1, 12))
 
     # SUMMARY
     story.append(
         Paragraph("<b>" + resume["professional"]["title"] + "</b>", styles["Heading2"])
     )
     story.append(Paragraph(resume["professional"]["summary"], styles["BodyText"]))
-    story.append(Spacer(1, 12))
-
-    # PROFESSIONAL PROFILE
-    story.append(Paragraph("PROFESSIONAL PROFILE", styles["Heading2"]))
-    for profile in resume["professional"]["profile"]:
-        story.append(
-            Paragraph(
-                "<b>" + profile["title"] + "</b>" + " - " + profile["summary"],
-                styles["BodyText"],
-            )
-        )
-    story.append(Spacer(1, 12))
 
     # COMPETENCIES and TECHNICAL SKILLS
     story.append(Paragraph("COMPETENCIES and TECHNICAL SKILLS", styles["Heading2"]))
@@ -113,7 +100,6 @@ def create_resume(filename, resume):
             styles["BodyText"],
         )
     )
-    story.append(Spacer(1, 12))
 
     # Experience
     story.append(Paragraph("<b>PROFESSIONAL EXPERIENCE</b>", styles["Heading2"]))
@@ -144,7 +130,6 @@ def create_resume(filename, resume):
                     styles["BodyText"],
                 )
             )
-    story.append(Spacer(1, 12))
 
     # Education
     story.append(Paragraph("<b>EDUCATION</b>", styles["Heading2"]))
@@ -162,7 +147,6 @@ def create_resume(filename, resume):
                 styles["BodyText"],
             )
         )
-    story.append(Spacer(1, 12))
 
     doc.build(story)
     print(f"Resume generated: {filename}")
