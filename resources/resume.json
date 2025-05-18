@@ -97,7 +97,7 @@
                     ]
                 },
                 {
-                    "name": "Javascript (ES2019)",
+                    "name": "Javascript",
                     "versions": [
                         {
                             "version": "ES2019"
@@ -141,6 +141,126 @@
             ]
         },
         "experience": [
+            {
+                "title": "Internal Tools Software Engineer (Remote)",
+                "company": "ZOO Digital",
+                "from": "20220501",
+                "to": "20230801",
+                "location": {
+                    "city": "Sheffield",
+                    "state": "England"
+                },
+                "summary": "Design, test, and improve internal toolsets and applications. Build software applications that are scalable web services. Work as a full-stack engineer, participating in both the front-end and back-end development of an application. This includes code review, performance evaluation, internal tool management, and updates.",
+                "profile": [
+                    {
+                        "summary": "Maintained billing, project management, file storage, and asset management software applications. Includes troubleshooting, adding additional functionality based on customer feedback, and deployment."
+                    },
+                    {
+                        "summary": "Improved version control for assets used by artists and project managers. Assets can be approved or rejected along with a description."
+                    },
+                    {
+                        "summary": "Added GitLab pipelines to check for lint issues, unit test failures, and security issues. This allowed the team to deploy frequently and confidently."
+                    }
+                ],
+                "techstack": [
+                    {
+                        "name": "Django"
+                    },
+                    {
+                        "name": "Python"
+                    }
+                ]
+            },
+            {
+                "title": "Java Applications Developer Intern",
+                "company": "LigoLab",
+                "from": "20100901",
+                "to": "20110101",
+                "location": {
+                    "city": "Glendale",
+                    "state": "CA"
+                },
+                "summary": "Partnered in developing LigoLab-Information Systems, a comprehensive and scalable Laboratory Information System that helps physicians obtain specimen test results faster and track specimen lifecycles more easily. Focused on document imaging, specimen tracking and anatomic pathology aspects of the healthcare application.",
+                "profile": [
+                    {
+                        "summary": "Gained experience with Java, Swing, the software architecture model view controller and relational databases."
+                    },
+                    {
+                        "summary": "Responded to client requests to include new specimens / groups by making additions / modifications to the database. Used LigoLab API and implemented changes to the GUI."
+                    },
+                    {
+                        "summary": "Worked with a PDF writer API in order to modify existing implementations of the PDF writer. Handled modification of invoices, labels and requisitions documentation of the PDF template implementation."
+                    }
+                ],
+                "techstack": [
+                    {
+                        "name": "Java"
+                    },
+                    {
+                        "name": "MySQL"
+                    }
+                ]
+            },
+            {
+                "title": "Java Developer",
+                "company": "Deluxe Media",
+                "from": "20110701",
+                "to": "20181001",
+                "location": {
+                    "city": "Burbank",
+                    "state": "CA"
+                },
+                "summary": "Develop and maintain specifications for Blu-ray Disc Java (BD-J) title development. Develop BD-J library and templates used for title production. Create and maintain source code. Test and debug applications and create test plans for title QC processes. Facilitate frequent customer meetings to outline project status and address changing requirements",
+                "profile": [
+                    {
+                        "summary": "Managed the project lifecycle for Life of Pi, a high-profile title for 20th Century Fox. Developed a custom framework for Life of Pi 3D and 2D that seamlessly integrated with Fox's standard framework"
+                    },
+                    {
+                        "summary": "Led the design and development of the Activision Blizzard framework for the company's Blu-ray Collector's Edition of major titles, including Diablo 3, World of Warcraft, Mist of Panderia, and StarCraft 2: Heart of the Swarm."
+                    },
+                    {
+                        "summary": "Created reusable code for the Blizzard framework in order to meet aggressive, 2-3 week project turnaround times."
+                    }
+                ],
+                "techstack": [
+                    {
+                        "name": "Java"
+                    },
+                    {
+                        "name": "Blu-ray Java"
+                    }
+                ]
+            },
+            {
+                "title": "Java Developer (Remote)",
+                "company": "ZOO Digital",
+                "from": "20200601",
+                "to": "20220501",
+                "location": {
+                    "city": "Sheffield",
+                    "state": "England"
+                },
+                "summary": "Update ZOO's BD-J library and templates used for title production to the latest Disney specifications. Refactor the code base to support 4K Ultra HD. Test and debug BD-J applications and create test plans for title QC processes.",
+                "profile": [
+                    {
+                        "summary": "Developed a production title template generation application that improved the efficiency of ZOO's production title pipeline."
+                    },
+                    {
+                        "summary": "Managed the design and development of the UHD test disc to Disney specifications. The disc was submitted to Disney for approval and was approved, allowing ZOO to begin work on UHD titles"
+                    },
+                    {
+                        "summary": "Added GitLab pipelines to check for lint issues, unit test failures, and security issues. This allowed the team to deploy frequently and confidently."
+                    }
+                ],
+                "techstack": [
+                    {
+                        "name": "Java"
+                    },
+                    {
+                        "name": "Blu-ray Java"
+                    }
+                ]
+            },
             {
                 "title": "Internal Tools Software Engineer (Remote)",
                 "company": "ZOO Digital",
