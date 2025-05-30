@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 from reportlab.lib.pagesizes import LETTER
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -13,8 +14,8 @@ def create_resume(filename, resume):
         pagesize=LETTER,
         rightMargin=inch,
         leftMargin=inch,
-        topMargin=inch,
-        bottomMargin=inch,
+        topMargin=inch/2,
+        bottomMargin=inch/2,
     )
     styles = getSampleStyleSheet()
     story = []
@@ -36,19 +37,21 @@ def create_resume(filename, resume):
             right_align_title_style,
         )
     )
-    story.append(
-        Paragraph(
-            resume["person"]["website"] + " \u2022 " + resume["person"]["github"],
-            right_align_normal_style,
-        )
-    )
+
     story.append(
         Paragraph(
             resume["person"]["location"]["city"]
             + ", "
             + resume["person"]["location"]["state"]
             + " \u2022 "
-            + resume["person"]["website"],
+            + resume["person"]["email"],
+            right_align_normal_style,
+        )
+    )
+
+    story.append(
+        Paragraph(
+            resume["person"]["website"] + " \u2022 " + resume["person"]["github"],
             right_align_normal_style,
         )
     )
@@ -103,8 +106,11 @@ def create_resume(filename, resume):
 
     # Experience
     story.append(Paragraph("<b>PROFESSIONAL EXPERIENCE</b>", styles["Heading2"]))
-    for item in resume["professional"]["experience"]:
+    experience = resume["professional"]["experience"]
+
+    for item in experience:
         full_location = item["location"]["city"] + ", " + item["location"]["state"]
+
         story.append(
             Paragraph(
                 "<b>" + item["company"] + "</b> - " + full_location,
@@ -113,7 +119,13 @@ def create_resume(filename, resume):
         )
         story.append(
             Paragraph(
-                "<b>" + item["title"] + "</b>",
+                "<b>"
+                + item["title"]
+                + "</b>"
+                + " "
+                + to_month_name_year(item["from"], False)
+                + " to "
+                + to_month_name_year(item["to"], False),
                 styles["BodyText"],
             )
         )
@@ -143,13 +155,29 @@ def create_resume(filename, resume):
                 + " - "
                 + item["school"]["city"]
                 + ", "
-                + item["school"]["state"],
+                + item["school"]["state"]
+                + " "
+                + to_month_name_year(item["from"], True)
+                + " to "
+                + to_month_name_year(item["to"], True),
                 styles["BodyText"],
             )
         )
 
     doc.build(story)
     print(f"Resume generated: {filename}")
+
+
+def to_month_name_year(yyyymmdd, just_year):
+    if yyyymmdd == "PRESENT":
+        return "Present"
+
+    if len(yyyymmdd) == 8:
+        date_obj = datetime.strptime(yyyymmdd, "%Y%m%d")
+        if just_year:
+            return date_obj.strftime("%Y")
+        else:
+            return date_obj.strftime("%B, %Y")
 
 
 def main():

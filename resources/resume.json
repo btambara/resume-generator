@@ -142,6 +142,48 @@
         },
         "experience": [
             {
+                "title": "Software Developer and Analyst",
+                "company": "Premier America Credit Union",
+                "from": "20240601",
+                "to": "PRESENT",
+                "location": {
+                    "city": "Chatsworth",
+                    "state": "CA"
+                },
+                "summary": "Develop solutions using various languages and technologies for internal stakeholders at Premier America. Collaborate with business units to analyze, design workflows, and code solutions to enhance revenue, efficiency, and member experience. Utilize Symitar, SQL, Python, and web frameworks to create internal workflows. Lead planning, design, programming, testing, and support for new processes. Automate business processes, deploy new features, optimize APIs, and orchestrate data exchange. Create reusable code, documentation, provide application support, and collaborate with stakeholders. Handle Continuous Integration deployments, troubleshoot bugs, and address issues at the module level.",
+                "profile": [
+                    {
+                        "summary": "Maintained billing, project management, file storage, and asset management software applications. Includes troubleshooting, adding additional functionality based on customer feedback, and deployment."
+                    },
+                    {
+                        "summary": "Improved version control for assets used by artists and project managers. Assets can be approved or rejected along with a description."
+                    },
+                    {
+                        "summary": "Added GitLab pipelines to check for lint issues, unit test failures, and security issues. This allowed the team to deploy frequently and confidently."
+                    }
+                ],
+                "techstack": [
+                    {
+                        "name": "Javascript"
+                    },
+                    {
+                        "name": "Java"
+                    },
+                    {
+                        "name": "Python"
+                    },
+                    {
+                        "name": "Mulesoft"
+                    },
+                    {
+                        "name": "Salesforce"
+                    },
+                    {
+                        "name": "C#"
+                    }
+                ]
+            },
+            {
                 "title": "Internal Tools Software Engineer (Remote)",
                 "company": "ZOO Digital",
                 "from": "20220501",
@@ -168,66 +210,6 @@
                     },
                     {
                         "name": "Python"
-                    }
-                ]
-            },
-            {
-                "title": "Java Applications Developer Intern",
-                "company": "LigoLab",
-                "from": "20100901",
-                "to": "20110101",
-                "location": {
-                    "city": "Glendale",
-                    "state": "CA"
-                },
-                "summary": "Partnered in developing LigoLab-Information Systems, a comprehensive and scalable Laboratory Information System that helps physicians obtain specimen test results faster and track specimen lifecycles more easily. Focused on document imaging, specimen tracking and anatomic pathology aspects of the healthcare application.",
-                "profile": [
-                    {
-                        "summary": "Gained experience with Java, Swing, the software architecture model view controller and relational databases."
-                    },
-                    {
-                        "summary": "Responded to client requests to include new specimens / groups by making additions / modifications to the database. Used LigoLab API and implemented changes to the GUI."
-                    },
-                    {
-                        "summary": "Worked with a PDF writer API in order to modify existing implementations of the PDF writer. Handled modification of invoices, labels and requisitions documentation of the PDF template implementation."
-                    }
-                ],
-                "techstack": [
-                    {
-                        "name": "Java"
-                    },
-                    {
-                        "name": "MySQL"
-                    }
-                ]
-            },
-            {
-                "title": "Java Developer",
-                "company": "Deluxe Media",
-                "from": "20110701",
-                "to": "20181001",
-                "location": {
-                    "city": "Burbank",
-                    "state": "CA"
-                },
-                "summary": "Develop and maintain specifications for Blu-ray Disc Java (BD-J) title development. Develop BD-J library and templates used for title production. Create and maintain source code. Test and debug applications and create test plans for title QC processes. Facilitate frequent customer meetings to outline project status and address changing requirements",
-                "profile": [
-                    {
-                        "summary": "Managed the project lifecycle for Life of Pi, a high-profile title for 20th Century Fox. Developed a custom framework for Life of Pi 3D and 2D that seamlessly integrated with Fox's standard framework"
-                    },
-                    {
-                        "summary": "Led the design and development of the Activision Blizzard framework for the company's Blu-ray Collector's Edition of major titles, including Diablo 3, World of Warcraft, Mist of Panderia, and StarCraft 2: Heart of the Swarm."
-                    },
-                    {
-                        "summary": "Created reusable code for the Blizzard framework in order to meet aggressive, 2-3 week project turnaround times."
-                    }
-                ],
-                "techstack": [
-                    {
-                        "name": "Java"
-                    },
-                    {
-                        "name": "Blu-ray Java"
                     }
                 ]
             },
@@ -262,32 +244,62 @@
                 ]
             },
             {
-                "title": "Internal Tools Software Engineer (Remote)",
-                "company": "ZOO Digital",
-                "from": "20220501",
-                "to": "20230801",
+                "title": "Java Developer",
+                "company": "Deluxe Media",
+                "from": "20110701",
+                "to": "20181001",
                 "location": {
-                    "city": "Sheffield",
-                    "state": "England"
+                    "city": "Burbank",
+                    "state": "CA"
                 },
-                "summary": "Design, test, and improve internal toolsets and applications. Build software applications that are scalable web services. Work as a full-stack engineer, participating in both the front-end and back-end development of an application. This includes code review, performance evaluation, internal tool management, and updates.",
+                "summary": "Develop and maintain specifications for Blu-ray Disc Java (BD-J) title development. Develop BD-J library and templates used for title production. Create and maintain source code. Test and debug applications and create test plans for title QC processes. Facilitate frequent customer meetings to outline project status and address changing requirements",
                 "profile": [
                     {
-                        "summary": "Maintained billing, project management, file storage, and asset management software applications. Includes troubleshooting, adding additional functionality based on customer feedback, and deployment."
+                        "summary": "Managed the project lifecycle for Life of Pi, a high-profile title for 20th Century Fox. Developed a custom framework for Life of Pi 3D and 2D that seamlessly integrated with Fox's standard framework"
                     },
                     {
-                        "summary": "Improved version control for assets used by artists and project managers. Assets can be approved or rejected along with a description."
+                        "summary": "Led the design and development of the Activision Blizzard framework for the company's Blu-ray Collector's Edition of major titles, including Diablo 3, World of Warcraft, Mist of Panderia, and StarCraft 2: Heart of the Swarm."
                     },
                     {
-                        "summary": "Added GitLab pipelines to check for lint issues, unit test failures, and security issues. This allowed the team to deploy frequently and confidently."
+                        "summary": "Created reusable code for the Blizzard framework in order to meet aggressive, 2-3 week project turnaround times."
                     }
                 ],
                 "techstack": [
                     {
-                        "name": "Django"
+                        "name": "Java"
                     },
                     {
-                        "name": "Python"
+                        "name": "Blu-ray Java"
+                    }
+                ]
+            },
+            {
+                "title": "Java Applications Developer Intern",
+                "company": "LigoLab",
+                "from": "20100901",
+                "to": "20110101",
+                "location": {
+                    "city": "Glendale",
+                    "state": "CA"
+                },
+                "summary": "Partnered in developing LigoLab-Information Systems, a comprehensive and scalable Laboratory Information System that helps physicians obtain specimen test results faster and track specimen lifecycles more easily. Focused on document imaging, specimen tracking and anatomic pathology aspects of the healthcare application.",
+                "profile": [
+                    {
+                        "summary": "Gained experience with Java, Swing, the software architecture model view controller and relational databases."
+                    },
+                    {
+                        "summary": "Responded to client requests to include new specimens / groups by making additions / modifications to the database. Used LigoLab API and implemented changes to the GUI."
+                    },
+                    {
+                        "summary": "Worked with a PDF writer API in order to modify existing implementations of the PDF writer. Handled modification of invoices, labels and requisitions documentation of the PDF template implementation."
+                    }
+                ],
+                "techstack": [
+                    {
+                        "name": "Java"
+                    },
+                    {
+                        "name": "MySQL"
                     }
                 ]
             }
