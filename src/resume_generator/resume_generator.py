@@ -2,9 +2,18 @@ from datetime import datetime
 import json
 from reportlab.lib.pagesizes import LETTER
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.platypus import (
+    SimpleDocTemplate,
+    Paragraph,
+    ListFlowable,
+    ListItem,
+    Table,
+    TableStyle,
+    Spacer,
+)
 from reportlab.lib.units import inch
-from reportlab.lib.enums import TA_RIGHT
+from reportlab.lib.enums import TA_RIGHT, TA_LEFT
+from reportlab.lib import colors
 
 
 def create_resume(filename, resume):
@@ -14,11 +23,14 @@ def create_resume(filename, resume):
         pagesize=LETTER,
         rightMargin=inch,
         leftMargin=inch,
-        topMargin=inch/2,
-        bottomMargin=inch/2,
+        topMargin=inch,
+        bottomMargin=inch / 2,
     )
     styles = getSampleStyleSheet()
     story = []
+    left_align_normal_style = ParagraphStyle(
+        name="LeftAlign", parent=styles["Normal"], alignment=TA_LEFT
+    )
     right_align_normal_style = ParagraphStyle(
         name="RightAlign", parent=styles["Normal"], alignment=TA_RIGHT
     )
@@ -108,40 +120,69 @@ def create_resume(filename, resume):
     story.append(Paragraph("<b>PROFESSIONAL EXPERIENCE</b>", styles["Heading2"]))
     experience = resume["professional"]["experience"]
 
-    for item in experience:
+    for index, item in enumerate(experience):
         full_location = item["location"]["city"] + ", " + item["location"]["state"]
+        left_text = Paragraph(
+            "<b>" + item["title"] + "</b>" + " " + full_location,
+            left_align_normal_style,
+        )
+        right_text = Paragraph(
+            to_month_name_year(item["from"], False)
+            + " to "
+            + to_month_name_year(item["to"], False),
+            right_align_normal_style,
+        )
 
-        story.append(
-            Paragraph(
-                "<b>" + item["company"] + "</b> - " + full_location,
-                styles["BodyText"],
-            )
+        table = Table([[left_text, right_text]], colWidths=[None, 150])
+        table.setStyle([("ALIGN", (1, 0), (1, 0), "RIGHT")])
+
+        style = TableStyle(
+            [
+                # DEBUG TO SEE THE TABLE
+                # (
+                #     "BACKGROUND",
+                #     (0, 0),
+                #     (-1, -1),
+                #     colors.yellow,
+                # ),  # from top-left (0,0) to bottom-right (-1,-1)
+                # (
+                #     "GRID",
+                #     (0, 0),
+                #     (-1, -1),
+                #     1,
+                #     colors.black,
+                # ),  # optional: add a grid for visibility
+                # Remove padding
+                ("LEFTPADDING", (0, 0), (-1, -1), 0),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+                ("TOPPADDING", (0, 0), (-1, -1), 0),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+            ]
         )
-        story.append(
-            Paragraph(
-                "<b>"
-                + item["title"]
-                + "</b>"
-                + " "
-                + to_month_name_year(item["from"], False)
-                + " to "
-                + to_month_name_year(item["to"], False),
-                styles["BodyText"],
-            )
-        )
+
+        table.setStyle(style)
+        story.append(table)
+
         story.append(
             Paragraph(
                 item["summary"],
                 styles["BodyText"],
             )
         )
-        for another in item["profile"]:
-            story.append(
-                Paragraph(
-                    another["summary"],
-                    styles["BodyText"],
-                )
-            )
+
+        bullet_list = ListFlowable(
+            [
+                ListItem(Paragraph(text["summary"], styles["BodyText"]))
+                for text in item["profile"]
+            ],
+            bulletType="bullet",
+            start="-",
+        )
+
+        story.append(bullet_list)
+
+        if index != (len(experience) - 1):
+            story.append(Spacer(1, 12))
 
     # Education
     story.append(Paragraph("<b>EDUCATION</b>", styles["Heading2"]))
@@ -177,7 +218,7 @@ def to_month_name_year(yyyymmdd, just_year):
         if just_year:
             return date_obj.strftime("%Y")
         else:
-            return date_obj.strftime("%B, %Y")
+            return date_obj.strftime("%b %Y")
 
 
 def main():

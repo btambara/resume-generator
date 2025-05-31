@@ -33,10 +33,10 @@
         "skill": {
             "core": [
                 {
-                    "name": "Agile"
+                    "name": "Agile Software Development"
                 },
                 {
-                    "name": "Test Driven Development"
+                    "name": "Test-driven development (TDD)"
                 },
                 {
                     "name": "API Development"
@@ -127,6 +127,12 @@
             ],
             "application": [
                 {
+                    "name": "Symitar"
+                },
+                {
+                    "name": "Git"
+                },
+                {
                     "name": "GitLab"
                 },
                 {
@@ -192,7 +198,7 @@
                     "city": "Sheffield",
                     "state": "England"
                 },
-                "summary": "Design, test, and improve internal toolsets and applications. Build software applications that are scalable web services. Work as a full-stack engineer, participating in both the front-end and back-end development of an application. This includes code review, performance evaluation, internal tool management, and updates.",
+                "summary": "Designed, developed, and maintained scalable internal tools and web applications to support key business operations. Worked as a full-stack engineer, contributing to both front-end and back-end systems. Collaborated in code reviews, performance tuning, and feature development to improve usability and efficiency. Actively managed and enhanced internal systems to meet evolving organizational needs.",
                 "profile": [
                     {
                         "summary": "Maintained billing, project management, file storage, and asset management software applications. Includes troubleshooting, adding additional functionality based on customer feedback, and deployment."
