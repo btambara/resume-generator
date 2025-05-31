@@ -116,13 +116,19 @@
                     "name": "Mulesoft"
                 },
                 {
-                    "name": "bootstrap"
+                    "name": "Bootstrap"
                 },
                 {
                     "name": "jQuery"
                 },
                 {
                     "name": "AJAX"
+                },
+                {
+                    "name": "React"
+                },
+                {
+                    "name": "Vue"
                 }
             ],
             "application": [
@@ -159,13 +165,13 @@
                 "summary": "Develop solutions using various languages and technologies for internal stakeholders at Premier America. Collaborate with business units to analyze, design workflows, and code solutions to enhance revenue, efficiency, and member experience. Utilize Symitar, SQL, Python, and web frameworks to create internal workflows. Lead planning, design, programming, testing, and support for new processes. Automate business processes, deploy new features, optimize APIs, and orchestrate data exchange. Create reusable code, documentation, provide application support, and collaborate with stakeholders. Handle Continuous Integration deployments, troubleshoot bugs, and address issues at the module level.",
                 "profile": [
                     {
-                        "summary": "Maintained billing, project management, file storage, and asset management software applications. Includes troubleshooting, adding additional functionality based on customer feedback, and deployment."
+                        "summary": "Built a bi-directional Jira–ServiceNow integration using MuleSoft, automating ticket synchronization and eliminating manual entry for development features and bugs—saving time and streamlining cross-functional workflows."
                     },
                     {
-                        "summary": "Improved version control for assets used by artists and project managers. Assets can be approved or rejected along with a description."
+                        "summary": "Developed a robotic process automation (RPA) solution that queries financial data from a SQL database to evaluate member compliance with credit union eligibility requirements, enabling automated qualification for Wealth Management services and resolving a key audit finding."
                     },
                     {
-                        "summary": "Added GitLab pipelines to check for lint issues, unit test failures, and security issues. This allowed the team to deploy frequently and confidently."
+                        "summary": "Designed and developed a UiPath robotic process automation to securely download financial data from an sFTP server, enabling automated archiving, parsing with C#, and data ingestion into a SQL database with upsert operations into Wealth Management Salesforce."
                     }
                 ],
                 "techstack": [
@@ -186,6 +192,12 @@
                     },
                     {
                         "name": "C#"
+                    },
+                    {
+                        "name": "UiPath"
+                    },
+                    {
+                        "name": "SQL"
                     }
                 ]
             },
@@ -201,13 +213,13 @@
                 "summary": "Designed, developed, and maintained scalable internal tools and web applications to support key business operations. Worked as a full-stack engineer, contributing to both front-end and back-end systems. Collaborated in code reviews, performance tuning, and feature development to improve usability and efficiency. Actively managed and enhanced internal systems to meet evolving organizational needs.",
                 "profile": [
                     {
-                        "summary": "Maintained billing, project management, file storage, and asset management software applications. Includes troubleshooting, adding additional functionality based on customer feedback, and deployment."
+                        "summary": "Maintained and enhanced billing, project management, file storage, and asset management applications by troubleshooting issues, implementing new features driven by user feedback, and managing deployments to ensure reliability and performance."
                     },
                     {
-                        "summary": "Improved version control for assets used by artists and project managers. Assets can be approved or rejected along with a description."
+                        "summary": "Enhanced version control system for assets used by artists and project managers, implementing approval and rejection workflows with descriptive feedback to streamline asset management and collaboration."
                     },
                     {
-                        "summary": "Added GitLab pipelines to check for lint issues, unit test failures, and security issues. This allowed the team to deploy frequently and confidently."
+                        "summary": "Developed and integrated GitLab CI pipelines to enforce code formatting, linting, unit testing, and security checks—including package vulnerability scanning—enabling the team to deploy frequently with increased confidence and reliability."
                     }
                 ],
                 "techstack": [
@@ -228,16 +240,16 @@
                     "city": "Sheffield",
                     "state": "England"
                 },
-                "summary": "Update ZOO's BD-J library and templates used for title production to the latest Disney specifications. Refactor the code base to support 4K Ultra HD. Test and debug BD-J applications and create test plans for title QC processes.",
+                "summary": "Updated and refactored ZOO’s BD-J library and templates to meet the latest Disney specifications and support 4K Ultra HD. Developed and executed test plans for BD-J applications, ensuring high-quality title production. Troubleshot and debugged complex applications, collaborating with cross-functional teams to enhance reliability and performance.",
                 "profile": [
                     {
-                        "summary": "Developed a production title template generation application that improved the efficiency of ZOO's production title pipeline."
+                        "summary": "Developed a production title template generation application that streamlined ZOO’s title production pipeline, significantly improving operational efficiency and throughput."
                     },
                     {
-                        "summary": "Managed the design and development of the UHD test disc to Disney specifications. The disc was submitted to Disney for approval and was approved, allowing ZOO to begin work on UHD titles"
+                        "summary": "Led the design and development of the UHD test disc in accordance with Disney specifications, successfully obtaining Disney’s approval and enabling ZOO to initiate UHD title production, generating additional revenue for the company."
                     },
                     {
-                        "summary": "Added GitLab pipelines to check for lint issues, unit test failures, and security issues. This allowed the team to deploy frequently and confidently."
+                        "summary": "Maintained and enhanced a Python application that converts US DVD specification files into international formats, improving productivity and streamlining cross-region compatibility."
                     }
                 ],
                 "techstack": [
@@ -258,16 +270,16 @@
                     "city": "Burbank",
                     "state": "CA"
                 },
-                "summary": "Develop and maintain specifications for Blu-ray Disc Java (BD-J) title development. Develop BD-J library and templates used for title production. Create and maintain source code. Test and debug applications and create test plans for title QC processes. Facilitate frequent customer meetings to outline project status and address changing requirements",
+                "summary": "Develop and maintain specifications for Blu-ray Disc Java (BD-J) title development, including the design and implementation of reusable BD-J libraries and production templates. Create and manage source code, perform thorough testing and debugging of BD-J applications, and develop test plans to support quality control processes. Collaborate closely with clients through regular meetings to communicate project status and adapt to evolving requirements.",
                 "profile": [
                     {
-                        "summary": "Managed the project lifecycle for Life of Pi, a high-profile title for 20th Century Fox. Developed a custom framework for Life of Pi 3D and 2D that seamlessly integrated with Fox's standard framework"
+                        "summary": "Managed the full project lifecycle for Life of Pi, a high-profile title for 20th Century Fox, and developed a custom BD-J framework for both 3D and 2D formats that seamlessly integrated with Fox’s standard framework to ensure compatibility and maintain studio standards."
                     },
                     {
-                        "summary": "Led the design and development of the Activision Blizzard framework for the company's Blu-ray Collector's Edition of major titles, including Diablo 3, World of Warcraft, Mist of Panderia, and StarCraft 2: Heart of the Swarm."
+                        "summary": "Led the design and development of a custom Blu-ray framework for Activision Blizzard’s Collector’s Edition titles, including Diablo III, World of Warcraft: Mists of Pandaria, and StarCraft II: Heart of the Swarm, ensuring a consistent and high-quality user experience across multiple flagship releases."
                     },
                     {
-                        "summary": "Created reusable code for the Blizzard framework in order to meet aggressive, 2-3 week project turnaround times."
+                        "summary": "Migrated an iTunes packaging script from Perl to a Java-based GUI application, modernizing the tool to align with updated studio specifications. Enhanced the application with robust error handling and logging features to detect missing files and improve maintainability."
                     }
                 ],
                 "techstack": [
@@ -291,13 +303,13 @@
                 "summary": "Partnered in developing LigoLab-Information Systems, a comprehensive and scalable Laboratory Information System that helps physicians obtain specimen test results faster and track specimen lifecycles more easily. Focused on document imaging, specimen tracking and anatomic pathology aspects of the healthcare application.",
                 "profile": [
                     {
-                        "summary": "Gained experience with Java, Swing, the software architecture model view controller and relational databases."
+                        "summary": "Gained hands-on experience with Java and Swing, applying the Model-View-Controller (MVC) architectural pattern and working with relational databases to develop interactive and structured applications."
                     },
                     {
-                        "summary": "Responded to client requests to include new specimens / groups by making additions / modifications to the database. Used LigoLab API and implemented changes to the GUI."
+                        "summary": "Implemented client-driven enhancements by updating database schemas and modifying application logic to support new specimen and group types. Utilized the LigoLab API and made corresponding updates to the GUI to ensure seamless integration and usability."
                     },
                     {
-                        "summary": "Worked with a PDF writer API in order to modify existing implementations of the PDF writer. Handled modification of invoices, labels and requisitions documentation of the PDF template implementation."
+                        "summary": "Worked with a PDF writer API to enhance and modify existing implementations for generating invoices, labels, and requisition documents. Updated PDF template logic to meet evolving business requirements and improve document accuracy and presentation."
                     }
                 ],
                 "techstack": [

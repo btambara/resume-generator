@@ -21,9 +21,9 @@ def create_resume(filename, resume):
     doc = SimpleDocTemplate(
         filename,
         pagesize=LETTER,
-        rightMargin=inch,
-        leftMargin=inch,
-        topMargin=inch,
+        rightMargin=inch / 2,
+        leftMargin=inch / 2,
+        topMargin=inch / 2,
         bottomMargin=inch / 2,
     )
     styles = getSampleStyleSheet()
@@ -101,7 +101,7 @@ def create_resume(filename, resume):
     )
     story.append(
         Paragraph(
-            "<b>Frameworks: </b>" + skills,
+            "<b>Frameworks/Libraries: </b>" + skills,
             styles["BodyText"],
         )
     )
@@ -123,7 +123,7 @@ def create_resume(filename, resume):
     for index, item in enumerate(experience):
         full_location = item["location"]["city"] + ", " + item["location"]["state"]
         left_text = Paragraph(
-            "<b>" + item["title"] + "</b>" + " " + full_location,
+            "<b>" + item["title"] + "</b>" + " - " + full_location,
             left_align_normal_style,
         )
         right_text = Paragraph(
@@ -176,7 +176,7 @@ def create_resume(filename, resume):
                 for text in item["profile"]
             ],
             bulletType="bullet",
-            start="-",
+            start="\u27a4",
         )
 
         story.append(bullet_list)
