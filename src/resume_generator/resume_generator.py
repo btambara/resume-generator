@@ -17,7 +17,12 @@ from reportlab.lib import colors
 
 
 def create_resume(filename, resume):
-    test = 32
+    title = (
+        resume["person"]["name"]["first"]
+        + " "
+        + resume["person"]["name"]["last"]
+        + "'s Resume"
+    )
     doc = SimpleDocTemplate(
         filename,
         pagesize=LETTER,
@@ -25,6 +30,7 @@ def create_resume(filename, resume):
         leftMargin=inch / 2,
         topMargin=inch / 2,
         bottomMargin=inch / 2,
+        title=title,
     )
     styles = getSampleStyleSheet()
     story = []
@@ -225,10 +231,10 @@ def main():
     with open("resources/resume.json", "r") as file:
         data = json.load(file)
         file_name = (
-            data["person"]["name"]["first"]
+            "Resume_"
+            + data["person"]["name"]["first"]
             + "_"
             + data["person"]["name"]["last"]
-            + "_Resume"
         )
         filename = file_name + ".pdf"
         create_resume(filename, data)

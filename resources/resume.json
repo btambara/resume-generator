@@ -14,22 +14,6 @@
         }
     },
     "professional": {
-        "title": "Software Developer and Analyst",
-        "summary": "Quality-focused application developer with a strong passion for clean, efficient programming and delivering scalable, sustainable solutions. Committed to writing elegant, reusable, and maintainable code that supports long-term success. Brings over 10 years of hands-on experience across the full software development lifecycle, from initial design to deployment. Skilled in leveraging deep expertise in Java, Python, and SQL to enhance user experiences and develop innovative, high-performance applications.",
-        "profile": [
-            {
-                "title": "View time consuming processes and system shortfalls as opportunities to innovate",
-                "summary": "Developed applications to automate time-consuming tasks, increase operational efficiency, and eliminate errors caused by manual intervention."
-            },
-            {
-                "title": "Continuously learn and adapt to rapidly evolving and emerging technologies",
-                "summary": "Automated process for backing up major studio projects at Deluxe Media. Learned Python and PHP to develop a user-friendly and intuitive web interface."
-            },
-            {
-                "title": "View time consuming processes and system shortfalls as opportunities to innovate",
-                "summary": "Refactored codebase to reflect the latest Python 3 changes. Updated all libraries for compatibility. Added typing to most of the codebase. Wrote unit tests to confirm that the changes work correctly."
-            }
-        ],
         "skill": {
             "core": [
                 {
