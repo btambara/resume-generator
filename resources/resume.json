@@ -317,7 +317,7 @@
                         "summary": "Worked with a PDF writer API to enhance and modify existing implementations for generating invoices, labels, and requisition documents. Updated PDF template logic to meet evolving business requirements and improve document accuracy and presentation."
                     }
                 ],
-                "techstack": [
+                "stack": [
                     {
                         "name": "Java"
                     },
