@@ -14,6 +14,22 @@
         }
     },
     "professional": {
+        "title": "Software Developer and Analyst",
+        "summary": "Quality-focused application developer with a strong passion for clean, efficient programming and delivering scalable, sustainable solutions. Committed to writing elegant, reusable, and maintainable code that supports long-term success. Brings over 10 years of hands-on experience across the full software development lifecycle, from initial design to deployment. Skilled in leveraging deep expertise in Java, Python, and SQL to enhance user experiences and develop innovative, high-performance applications.",
+        "profile": [
+            {
+                "title": "View time consuming processes and system shortfalls as opportunities to innovate",
+                "summary": "Developed applications to automate time-consuming tasks, increase operational efficiency, and eliminate errors caused by manual intervention."
+            },
+            {
+                "title": "Continuously learn and adapt to rapidly evolving and emerging technologies",
+                "summary": "Automated process for backing up major studio projects at Deluxe Media. Learned Python and PHP to develop a user-friendly and intuitive web interface."
+            },
+            {
+                "title": "View time consuming processes and system shortfalls as opportunities to innovate",
+                "summary": "Refactored codebase to reflect the latest Python 3 changes. Updated all libraries for compatibility. Added typing to most of the codebase. Wrote unit tests to confirm that the changes work correctly."
+            }
+        ],
         "skill": {
             "core": [
                 {
@@ -139,6 +155,7 @@
         "experience": [
             {
                 "title": "Software Developer and Analyst",
+                "website": "https://www.premieramerica.com/",
                 "company": "Premier America Credit Union",
                 "from": "20240601",
                 "to": "PRESENT",
@@ -158,7 +175,7 @@
                         "summary": "Designed and developed a UiPath robotic process automation to securely download financial data from an sFTP server, enabling automated archiving, parsing with C#, and data ingestion into a SQL database with upsert operations into Wealth Management Salesforce."
                     }
                 ],
-                "techstack": [
+                "stack": [
                     {
                         "name": "Javascript"
                     },
@@ -188,6 +205,7 @@
             {
                 "title": "Internal Tools Software Engineer (Remote)",
                 "company": "ZOO Digital",
+                "website": "https://www.zoodigital.com/",
                 "from": "20220501",
                 "to": "20230801",
                 "location": {
@@ -206,7 +224,7 @@
                         "summary": "Developed and integrated GitLab CI pipelines to enforce code formatting, linting, unit testing, and security checks—including package vulnerability scanning—enabling the team to deploy frequently with increased confidence and reliability."
                     }
                 ],
-                "techstack": [
+                "stack": [
                     {
                         "name": "Django"
                     },
@@ -218,6 +236,7 @@
             {
                 "title": "Java Developer (Remote)",
                 "company": "ZOO Digital",
+                "website": "https://www.zoodigital.com/",
                 "from": "20200601",
                 "to": "20220501",
                 "location": {
@@ -236,7 +255,7 @@
                         "summary": "Maintained and enhanced a Python application that converts US DVD specification files into international formats, improving productivity and streamlining cross-region compatibility."
                     }
                 ],
-                "techstack": [
+                "stack": [
                     {
                         "name": "Java"
                     },
@@ -248,6 +267,7 @@
             {
                 "title": "Java Developer",
                 "company": "Deluxe Media",
+                "website": "https://www.bydeluxe.com/",
                 "from": "20110701",
                 "to": "20181001",
                 "location": {
@@ -266,7 +286,7 @@
                         "summary": "Migrated an iTunes packaging script from Perl to a Java-based GUI application, modernizing the tool to align with updated studio specifications. Enhanced the application with robust error handling and logging features to detect missing files and improve maintainability."
                     }
                 ],
-                "techstack": [
+                "stack": [
                     {
                         "name": "Java"
                     },
@@ -278,6 +298,7 @@
             {
                 "title": "Java Applications Developer Intern",
                 "company": "LigoLab",
+                "website": "https://www.ligolab.com/",
                 "from": "20100901",
                 "to": "20110101",
                 "location": {
