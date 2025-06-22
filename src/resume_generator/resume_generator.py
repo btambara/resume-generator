@@ -192,24 +192,51 @@ def create_resume(filename, resume):
 
     # Education
     story.append(Paragraph("<b>EDUCATION</b>", styles["Heading2"]))
-    for item in resume["education"]:
-        story.append(
-            Paragraph(
-                "<b>"
-                + item["degree"]
-                + "</b> - "
-                + item["school"]["name"]
-                + " - "
-                + item["school"]["city"]
-                + ", "
-                + item["school"]["state"]
-                + " "
-                + to_month_name_year(item["from"], True)
-                + " to "
-                + to_month_name_year(item["to"], True),
-                styles["BodyText"],
-            )
+    for index, item in enumerate(resume["education"]):
+        full_location = item["school"]["city"] + ", " + item["school"]["state"]
+        left_text = Paragraph(
+            "<b>"
+            + item["degree"]
+            + "</b>"
+            + " - "
+            + item["school"]["name"]
+            + " - "
+            + full_location,
+            left_align_normal_style,
         )
+        right_text = Paragraph(
+            to_month_name_year(item["from"], True)
+            + " to "
+            + to_month_name_year(item["to"], True),
+            right_align_normal_style,
+        )
+
+        table = Table([[left_text, right_text]], colWidths=[None, 150])
+        table.setStyle([("ALIGN", (1, 0), (1, 0), "RIGHT")])
+
+        # story.append(
+        #     Paragraph(
+        #         "<b>"
+        #         + item["degree"]
+        #         + "</b> - "
+        #         + item["school"]["name"]
+        #         + " - "
+        #         + item["school"]["city"]
+        #         + ", "
+        #         + item["school"]["state"]
+        #         + " "
+        #         + to_month_name_year(item["from"], True)
+        #         + " to "
+        #         + to_month_name_year(item["to"], True),
+        #         styles["BodyText"],
+        #     )
+        # )
+
+        table.setStyle(style)
+        story.append(table)
+
+        if index != (len(resume["education"]) - 1):
+            story.append(Spacer(1, 12))
 
     doc.build(story)
     print(f"Resume generated: {filename}")
