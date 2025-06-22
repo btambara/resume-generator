@@ -128,10 +128,12 @@ def create_resume(filename, resume):
 
     for index, item in enumerate(experience):
         full_location = item["location"]["city"] + ", " + item["location"]["state"]
+        company = Paragraph(
+            "<b>" + item["company"] + "</b>",
+            left_align_normal_style
+        )
         left_text = Paragraph(
             "<b>"
-            + item["company"]
-            + " - "
             + item["title"]
             + "</b>"
             + " - "
@@ -145,7 +147,7 @@ def create_resume(filename, resume):
             right_align_normal_style,
         )
 
-        table = Table([[left_text, right_text]], colWidths=[None, 150])
+        table = Table([[company], [left_text, right_text]], colWidths=[None, 150])
         table.setStyle([("ALIGN", (1, 0), (1, 0), "RIGHT")])
 
         style = TableStyle(
