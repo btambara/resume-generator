@@ -129,7 +129,13 @@ def create_resume(filename, resume):
     for index, item in enumerate(experience):
         full_location = item["location"]["city"] + ", " + item["location"]["state"]
         left_text = Paragraph(
-            "<b>" + item["title"] + "</b>" + " - " + full_location,
+            "<b>"
+            + item["company"]
+            + " - "
+            + item["title"]
+            + "</b>"
+            + " - "
+            + full_location,
             left_align_normal_style,
         )
         right_text = Paragraph(
