@@ -1,0 +1,11 @@
+services:
+  resume-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: resume-generator
+    working_dir: /app
+    volumes:
+      - ./output:/app/output:Z
+    environment:
+      PYTHONUNBUFFERED: "1"

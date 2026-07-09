@@ -1,0 +1,3 @@
+[submodule "resources/brian-tambara-resume"]
+	path = resources/brian-tambara-resume
+	url = git@github.com:btambara/brian-tambara-resume.git

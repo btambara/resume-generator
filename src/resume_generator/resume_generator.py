@@ -1,5 +1,7 @@
 from datetime import datetime
+from pathlib import Path
 import json
+
 from reportlab.lib.pagesizes import LETTER
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import (
@@ -10,6 +12,7 @@ from reportlab.platypus import (
     Table,
     TableStyle,
     Spacer,
+    KeepTogether
 )
 from reportlab.lib.units import inch
 from reportlab.lib.enums import TA_RIGHT, TA_LEFT
@@ -24,7 +27,7 @@ def create_resume(filename, resume):
         + "'s Resume"
     )
     doc = SimpleDocTemplate(
-        filename,
+        str(filename),
         pagesize=LETTER,
         rightMargin=inch / 2,
         leftMargin=inch / 2,
@@ -80,53 +83,13 @@ def create_resume(filename, resume):
     )
     story.append(Paragraph(resume["professional"]["summary"], styles["BodyText"]))
 
-    # COMPETENCIES and TECHNICAL SKILLS
-    story.append(Paragraph("COMPETENCIES and TECHNICAL SKILLS", styles["Heading2"]))
-    skills = ", ".join(item["name"] for item in resume["professional"]["skill"]["core"])
-    story.append(
-        Paragraph(
-            "<b>Core Competencies: </b>" + skills,
-            styles["BodyText"],
-        )
-    )
-
-    languages = []
-    for item in resume["professional"]["skill"]["progamming"]:
-        name = item["name"]
-        versions = ",".join(v["version"] for v in item["versions"])
-        languages.append(f"{name} ({versions})")
-    story.append(
-        Paragraph(
-            "<b>Programming Languages: </b>" + ", ".join(languages),
-            styles["BodyText"],
-        )
-    )
-
-    skills = ", ".join(
-        skill["name"] for skill in resume["professional"]["skill"]["framework"]
-    )
-    story.append(
-        Paragraph(
-            "<b>Frameworks/Libraries: </b>" + skills,
-            styles["BodyText"],
-        )
-    )
-
-    skills = ", ".join(
-        skill["name"] for skill in resume["professional"]["skill"]["application"]
-    )
-    story.append(
-        Paragraph(
-            "<b>Applications: </b>" + skills,
-            styles["BodyText"],
-        )
-    )
-
     # Experience
     story.append(Paragraph("<b>PROFESSIONAL EXPERIENCE</b>", styles["Heading2"]))
     experience = resume["professional"]["experience"]
 
     for index, item in enumerate(experience):
+        experience_flowables = []
+
         full_location = item["location"]["city"] + ", " + item["location"]["state"]
         company = Paragraph(
             "<b>" + item["company"] + "</b>",
@@ -175,9 +138,9 @@ def create_resume(filename, resume):
         )
 
         table.setStyle(style)
-        story.append(table)
+        experience_flowables.append(table)
 
-        story.append(
+        experience_flowables.append(
             Paragraph(
                 item["summary"],
                 styles["BodyText"],
@@ -193,13 +156,40 @@ def create_resume(filename, resume):
             start="\u27a4",
         )
 
-        story.append(bullet_list)
+        experience_flowables.append(bullet_list)
+
+        # Technical Environment: 
+        experience_flowables.append(Spacer(1, 8))
+
+        technical_environment = item["technicalEnvironment"]
+
+        technologies = []
+
+        for items in technical_environment.values():
+            for item in items:
+                tech = item["name"]
+
+                if "version" in item:
+                    versions = ", ".join(str(v["release"]) for v in item["version"])
+                    tech += f" ({versions})"
+
+                technologies.append(tech)
+
+        experience_flowables.append(
+            Paragraph(
+                f"<b>Technical Environment:</b> {', '.join(technologies)}",
+                left_align_normal_style
+            )
+        )
 
         if index != (len(experience) - 1):
-            story.append(Spacer(1, 12))
-
+            experience_flowables.append(Spacer(1, 12))
+        
+        story.append(KeepTogether(experience_flowables))
+        
     # Education
-    story.append(Paragraph("<b>EDUCATION</b>", styles["Heading2"]))
+    education_flowables = []
+    education_flowables.append(Paragraph("<b>EDUCATION</b>", styles["Heading2"]))
     for index, item in enumerate(resume["education"]):
         full_location = item["school"]["city"] + ", " + item["school"]["state"]
         left_text = Paragraph(
@@ -241,10 +231,12 @@ def create_resume(filename, resume):
         # )
 
         table.setStyle(style)
-        story.append(table)
+        education_flowables.append(table)
 
         if index != (len(resume["education"]) - 1):
-            story.append(Spacer(1, 12))
+            education_flowables.append(Spacer(1, 12))
+
+    story.append(KeepTogether(education_flowables))
 
     doc.build(story)
     print(f"Resume generated: {filename}")
@@ -263,7 +255,10 @@ def to_month_name_year(yyyymmdd, just_year):
 
 
 def main():
-    with open("resources/resume.json", "r") as file:
+    with open("resources/brian-tambara-resume/resume.json", "r") as file:
+        output_dir = Path("output")
+        output_dir.mkdir(parents=True, exist_ok=True)
+
         data = json.load(file)
         file_name = (
             "Resume_"
@@ -271,7 +266,7 @@ def main():
             + "_"
             + data["person"]["name"]["last"]
         )
-        filename = file_name + ".pdf"
+        filename = output_dir / (file_name + ".pdf")
         create_resume(filename, data)
 
 
